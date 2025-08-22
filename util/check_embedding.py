@@ -16,9 +16,4 @@ vectorstore = PGVector(
 query = "How has artificial intelligence evolved?"
 results = vectorstore.similarity_search(query, k=1)
 
-if results:
-    print("Found similar content:")
-    print("-" * 60)
-    print(results[0].page_content[:500] + "...")
-else:
-    print("No embedding found.")
+print(results)
